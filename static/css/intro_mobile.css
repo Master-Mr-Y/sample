@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    z-index: 0;
+}
+@font-face {
+    font-family: "bubble";
+    src: url("/static/fonts/bubblegum.ttf");
+}
+@font-face {
+    font-family: "hub";
+    src: url("/static/fonts/hubballi.ttf");
+}
+@font-face {
+    font-family: "galen";
+    src: url("/static/fonts/galdeano.ttf");
+}
+
+body{
+    background-color: #0f0e0e;
+}
+
+#landing{
+    width: 100%;
+    height: 100vh;
+    background-color: #0f0e0e;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    z-index: 1;
+    display: none;
+   animation: fadeOut 5s ease forwards;
+
+    
+    
+}
+
+
+#landing img{
+    width: 70px;
+    height: 60px;
+    position: relative;
+    bottom: 20px;
+    z-index: 2;
+    
+       
+}
+
+@keyframes fadeOut {
+  from {
+    display: flex;
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@media (max-width:600px) {
+    body{
+        background-color: #0f0e0e;
+    }
+    #navbar{
+        padding-left: 3px;
+    }
+    .logo{
+        width: 60px;
+        height: 50px;
+        position: relative;
+        bottom: 0.5vh
+    }
+    #navbar a img{
+        width:  45px;
+        height: 45px;
+        position: relative;
+        top: 0.5vh;
+        
+    }
+    #headdings{
+        text-align: center;
+        height: 40vh;
+    }
+    #footer{
+        position: relative;
+        bottom: 3vh;
+    }
+    #footer input{
+        width: 80%;
+        position: relative;
+        left: 3vw;
+        font-size: 20px;
+    }
+    #send {
+        position: relative;
+        left: 5vw;
+        
+        z-index: 1;
+    }
+    .p1{
+        font-size: 12px;
+        position: relative;
+        
+    }
+    .para1{
+        position: relative;
+        top: 2vh;
+    }
+}

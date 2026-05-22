@@ -1,0 +1,132 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "bubble";
+    src: url("/static/fonts/bubblegum.ttf");
+}
+@font-face {
+    font-family: "hub";
+    src: url("/static/fonts/hubballi.ttf");
+}
+@font-face {
+    font-family: "galen";
+    src: url("/static/fonts/galdeano.ttf");
+}
+
+
+
+@media (max-width: 600px) {
+   body{
+    background-color: #0f0e0e;
+   }
+   #navbar{
+        padding-left: 0px;
+        height: 70px;
+    }
+    .logo{
+        width: 60px;
+        height: 50px;
+        position: relative;
+        bottom: 0vh;
+    }
+    #navbar a img{
+        width:  45px;
+        height: 45px;
+        position: relative;
+        top: 0.5vh;
+    }
+    #block1 {
+        display: none;
+    }
+    
+    #navbar h1{
+        position: relative;
+        right: 32%;
+        top: 40%;
+    }
+    #block2{
+        width: 100%;
+    }
+    .hrr{
+        display: none;
+    }
+    #chat_block{
+        width: 100%;
+    }
+    .bot_logo{
+        width: 20px;
+        height: 20px;
+    }
+    #user_space{
+        margin-top: 1vh;
+        padding-right: 10px;
+    }
+    .bot_message p{
+        font-size: 14px;
+        text-align: left;
+        
+    }
+    .user_message p{
+        font-size: 17px;
+    }
+    #mid{
+        height: 82.9vh;
+    }
+    #chatblock{
+        height: 82%;
+    }
+    #inputblock{
+        height: 15%;
+       
+    }
+    #input{
+        height: 50px;
+        width: 85%;
+        margin-left: 0px;
+        font-size: 20px;
+        z-index: 0;
+        position: relative;
+        top: 4vh;
+        padding-right: 20px;
+        
+
+    }
+    .p11 {
+       font-size: 12px;
+    }
+    #sender{
+        width: 40px;
+        height: 40px;
+        margin-left: 0px;
+        z-index: 1;
+        right: 0px;
+        left: 5px;
+        position: relative;
+        top: 4.5vh;
+        
+    }
+
+    #code{
+        max-width: 100%;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid whitesmoke;
+        background-color: rgb(72, 72, 72);
+        color: whitesmoke;
+        margin: 1px;
+        word-wrap: break-word;
+        padding: 10px ;
+        
+
+
+    }
+    #code h6{
+        max-width: 98%;
+        color: white;
+        word-wrap: break-word;
+    }
+  
+}

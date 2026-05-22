@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rio AI</title>
+
+   <!--  modifide || -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/intro.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/intro_mobile.css') }}">
+<!-- 
+    <link rel="stylesheet" href="/static/css/intro.css">
+    <link rel="stylesheet" href="/static/css/intro_mobile.css"> -->
+
+</head>
+<body>
+      
+       <!-- landing animation -->
+
+       <div id="landing">
+          <div class="hr"></div>
+              <img src="{{ url_for('static', filename='images/logo.png') }}"alt=""><br>
+              
+          <div class="hr"></div>
+       </div>
+
+
+
+    <nav id="navbar">
+        <!-- modifide || src="{{ url_for('static', filename='images/logo.png') }}"  -->
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" class="logo">
+        <!-- modifide || src="{{ url_for('static', filename='images/gust.png') }}" -->
+        <a href=""><img src="{{ url_for('static', filename='images/gust.png') }}" alt=""></a>
+    </nav>
+
+    <div id="headdings">
+        <h1 class="txt ">RiO</h1> 
+        <h2 class="txt">Google gemini API powered artificial intelligence</h2>
+        <h3 class="txt">Ask anything with RiO</h3>
+    </div>
+
+    <div id="footer">
+       <!--  <form action="/index" method="GET">
+        <input type="text" placeholder="ask anything..?" id="input" name="intro_msg">
+        <button type="submit" id="send"  ></button>
+        </form> 
+ -->
+
+         <input type="text" placeholder="ask anything..?" id="input" name="intro_msg">
+        <button type="submit" id="send" onclick="set()" ></button>
+    </div>
+
+    <p class="p1 para1">Devoloped By Mr.Y</p>
+    <br>
+    <p class="p1">©2026 Mr.Y. All rights reserved.</p>
+    
+</body>
+
+<script>
+    
+    function set(){
+        let value = document.getElementById("input").value;
+
+        window.location.href =
+        "/index?data=" + encodeURIComponent(value);
+
+    }
+</script>
+</html>

@@ -1,0 +1,339 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "bubble";
+    src: url("/static/fonts/bubblegum.ttf");
+}
+@font-face {
+    font-family: "hub";
+    src: url("/static/fonts/hubballi.ttf");
+}
+@font-face {
+    font-family: "galen";
+    src: url("/static/fonts/galdeano.ttf");
+}
+
+body{
+    background-color: #0f0e0e;
+}
+
+#navbar{
+    width: 100%;
+    height: 80px;
+   
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+.logo{
+   width: 60px;
+   height: 50px;
+   position: relative;
+   
+
+}
+
+#navbar h1{
+    color: white;
+    font-family: "bubble";
+    position: relative;
+    right: 45%;
+    font-size: 20px;
+    top: 42%;
+
+}
+
+#navbar a{
+    text-decoration: none;
+}
+
+#navbar a img{
+ 
+    width: 60px;
+    height: 60px;
+
+}
+
+hr{
+    opacity: 10%;
+    position: relative;
+    color: whitesmoke;
+    z-index: 2;
+    bottom: 10px;
+}
+
+#mid{
+    width: 100%;
+    height: 87vh;
+   
+    display: flex;
+}
+
+#block1{
+    width: 20%;
+    height: 100%;
+
+}
+#block2{
+    width: 75%;
+    height: 100%;
+    padding-left: 3.5%;
+}
+
+    /* block 1 style */
+
+#sub1{
+    width: 100%;
+    height: 40%;        /* sub1 styleing */
+   
+    align-content: center;
+    justify-items: center;
+}
+
+.ids{
+    display: flex;
+    width: 86%;
+    height: 20%;
+    border: 1px solid rgba(38, 38, 38, 0.781);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding: 10px auto;
+    color: white;
+    font-family: "galen";
+    font-size: 8px;
+    letter-spacing: 3px;
+   
+}
+.ids img{
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    margin-left: 20px;
+}
+.ids h1{
+    margin: 10px;
+    position: relative;
+    font-weight: 10;
+    
+    
+}
+.ids a{
+    text-decoration: none;
+    color: white;
+}
+
+.ids:nth-of-type(2) a h1{
+      position: relative;
+      top: 5px;
+}
+
+.ids:nth-of-type(3) a h1{
+      position: relative;
+      top: 4px;
+}
+
+.ids:hover{
+    border: 1px solid rgba(255, 255, 255, 0.781);
+}
+
+
+#sub2{
+    width: 100%;        /* sub2 styling */
+    height: 60%;
+    justify-items: center;
+    align-content: center;
+}
+
+.idr{
+    width: 86%;
+    height: 15%;
+    border: 1px solid rgba(38, 38, 38, 0.781);
+    margin-bottom: 18px;
+    border-radius: 15px;
+    padding: 10px auto;
+    color: white;
+    
+    font-size: 8px;
+    letter-spacing: 2px;
+    
+    align-content: center;
+}
+
+.idr:hover{
+     border: 1px solid rgba(255, 255, 255, 0.781);
+}
+
+.idr button{
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    font-size: 15px;
+    font-family: "galen";
+    color: whitesmoke;
+    background-color: transparent;
+    background: transparent;
+    border: transparent;
+}
+
+
+/* block 2 styling */
+
+#chatblock{
+    width: 100%;
+    height: 79%;
+   
+    overflow-y: auto;
+  
+}
+
+#inputblock{
+    width: 100%;
+    height: 17%;
+    position: relative;
+    
+    display: flex;
+}
+
+form{
+    width: 100%;
+    height: 90%;
+    display: flex;
+ 
+}
+/* inputblok styling */
+
+
+#input{
+    width: 50%;
+    height: 10vh;
+    background-color: #3d3a3a;
+    border: 0.2px solid rgb(42, 41, 41);
+    border-radius: 50px;
+    position: relative;
+    margin-left: 18%;
+    top: 2vh;
+    font-size: 23px;
+    color: white;
+    font-family: "hub";
+    padding-left: 15px;
+    padding-right: 80px;
+    display: fixed;
+}
+#input::placeholder{
+    color: #FFF;
+}
+
+#sender{
+ 
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    position: relative;
+    margin-left: 20px;
+    top: 2.7vh;
+    background-image: url("/static/images/send1.png");
+    background-size: 130% 120%;
+    background-repeat: no-repeat;
+    border: 0.5px solid white;
+    display: fixed;
+   
+    
+}
+
+#mid p{
+    color: whitesmoke;
+    text-align: center;
+    font-family: "galen";
+    position: relative;
+    right: 5%;
+    bottom: 1%;
+}
+
+
+/* #chatspace styling */
+
+#user_space{
+    width: 100%;
+    display: flex;
+    
+}
+
+.user_message{
+    max-width: 70%;
+    word-wrap: break-word;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    align-self: flex-start;
+    border-radius: 15px 15px 0px 15px;
+    margin-left: auto;
+    background-color: #3d3a3a;
+}
+.user_message p{
+    color: white;
+    font-size: 20px;
+    font-family: "hub";
+
+}
+
+#user_space button{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background-image: url("/static/images/gust.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 0.5px solid rgba(255, 255, 255, 0.535);
+    background-color: transparent;
+}
+
+
+/* bot space */
+
+
+#bot_space{
+    width: 100%;
+    display: flex;
+    
+}
+
+.bot_message{
+    max-width: 70%;
+    word-wrap: break-word;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    align-self: flex-start;
+    border-left: 1px solid whitesmoke;
+   
+    
+}
+.bot_message p{
+    color: white;
+    font-size: 20px;
+    font-family: "hub";
+    text-align: left;
+}
+
+#bot_space button{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background-image: url("/static/images/bot.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   margin-right: 5px;
+    background-color: transparent;
+}
+
+
+

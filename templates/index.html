@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale = 1.0 , user-scalable=no" >
+    <title>Rio AI</title>
+    <!-- modifide -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_mobile.css') }}">
+
+    <!-- unmodifide -->
+
+ <!--    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/index_mobile.css">
+ -->
+</head>
+
+<body>
+    
+    <nav id="navbar">
+        
+           <!--  modifide|| src="{{ url_for('static', filename='images/logo.png') }}" -->
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" id="funny" class="logo">
+        
+        <h1 id="funny">RiO</h1>
+        
+         <!--  modifide|| src="{{ url_for('static', filename='images/gust.png') }}" -->
+        <a href="#" id="gust"><img src="{{ url_for('static', filename='images/gust.png') }}" alt=""></a>
+        
+    </nav>
+    
+    <hr>
+
+    <div id="mid">
+
+        <div id="block1">          
+                                     <!-- side block -->
+            <div id="sub1">
+<!--                 modifide ||-->
+                <div class="ids"><img src="{{ url_for('static', filename='images/note.png') }}"alt=""><a href="#"><h1>New chat</h1></a></div>
+                <div class="ids"><img src="{{ url_for('static', filename='images/projects.png') }}" alt=""><a href=""><h1>Projects</h1></a></div>
+                <div class="ids"><img src="{{ url_for('static', filename='images/qurry.png') }}" alt=""><a href=""><h1>Any Qurries</h1></a></div>
+
+                <!-- <div class="ids"><img src="/static/images/note.png"alt=""><a href="#"><h1>New chat</h1></a></div>
+                <div class="ids"><img src="/static/images/projects.png" alt=""><a href=""><h1>Projects</h1></a></div>
+                <div class="ids"><img src="/static/images/qurry.png" alt=""><a href=""><h1>Any Qurries</h1></a></div>
+ -->
+            </div>
+
+            <hr class="hrr">
+
+            <div id="sub2">
+               <div class="idr"><button>What is DOM..?</button></div>
+               <div class="idr"><button>Can i ask..?</button></div>
+               <div class="idr"><button>What is this..?</button></div>
+               <div class="idr"><button>Talk tamil..?</button></div>
+               <div class="idr"><button>Can you explain..?</button></div>
+               
+            </div>
+
+        </div>
+        
+        <hr class="hrr">
+
+        <div id="block2">
+
+            <div id="chatblock"> 
+
+                <!-- user message -->
+                 <!--   <div id="user_space">
+                    <div class="user_message">
+                       <p>message  </p>
+                    </div>
+                    <button id="funny" class="user_logo"></button>
+                 </div>  -->
+
+                <!-- bot message -->
+
+        <!--             <div id="bot_space">
+                    <button id="funny" class="bot_logo"></button>
+                    <div class="bot_message">
+                       <p>python என்பது ஒரு எளிதில் கற்றுக்கொள்ளக்கூடிய programming language ஆகும். இதை பயன்படுத்தி software, website, game, data analysis மற்றும் artificial intelligence போன்ற பல விஷயங்களை உருவாக்கலாம். </p>
+                    </div>
+                  </div>  -->
+
+            </div>
+
+            <div id="inputblock">
+               
+                <form id="form">
+                 
+                <input  type="text" name="user_request" id="input" placeholder="ask anything..?">
+                <button type="submit" id="sender"></button>
+                 </form>
+            </div >
+            <p class="p11">Devoloped By Mr.Y</p>
+        </div>
+        
+    </div>
+
+</body>
+
+
+
+
+<script>
+      const params = new URLSearchParams(window.location.search);
+
+      const value = params.get("data");
+      document.getElementById("input").value=value;
+      
+      let form = document.getElementById("form");
+      let container = document.getElementById("chatblock")
+
+      form.addEventListener("submit", 
+      
+      async function(e){
+
+           e.preventDefault()
+
+           let user_value = document.getElementById("input").value;
+
+           container.innerHTML += `
+                 
+                <div id="user_space">
+                    <div class="user_message">
+                       <p>${user_value}</p>
+                    </div>
+                    <button  class="user_logo"></button>
+                 </div> 
+           
+           `;
+           document.getElementById("input").value="";
+           
+           let f_data = new FormData();
+
+           f_data.append("user",user_value);
+
+           let response = await fetch("/index",{
+               method : "POST",
+               body   : f_data
+           });
+
+           let result = await response.json();
+
+           container.innerHTML+=`
+                 
+                <div id="bot_space">
+                    <button  class="bot_logo"></button>
+                    <div class="bot_message">
+                       <p>${result.results}</p>
+                    </div>
+                </div>
+           
+           `;
+
+           
+      }
+      
+      );
+
+
+      //devops oopss
+
+      let gust = document.getElementById("gust");
+
+      gust.addEventListener("click", function(){
+        alert("Eale athulam innum devolop pannala...ippothaiku chat pannura choli aa mattum paathuko")
+      });
+    
+      let funny = document.getElementById("funny");
+      
+      funny.addEventListener("click" , function(){
+        alert("Eale kaiya vachittu chumma irukka mattiya")
+      });
+      
+
+</script>
+</html>

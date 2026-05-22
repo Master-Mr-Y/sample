@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "bubble";
+    src: url("/static/fonts/bubblegum.ttf");
+}
+@font-face {
+    font-family: "hub";
+    src: url("/static/fonts/hubballi.ttf");
+}
+@font-face {
+    font-family: "galen";
+    src: url("/static/fonts/galdeano.ttf");
+}
+
+body{
+    background-color: #0f0e0e;
+}
+
+#navbar{
+    width: 100%;
+    height: 80px;
+   
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.logo{
+   width: 60px;
+   height: 80px;
+   position: relative;
+   
+}
+
+#navbar a{
+    text-decoration: none;
+}
+
+#navbar a img{
+    width: 60px;
+    height: 60px;
+}
+
+#headdings{
+    width: 100%;
+    height: 250px;
+    
+    justify-items: center;
+    align-content: center;
+    color: white;
+    font-family: "bubble";
+}
+.txt{
+    margin-bottom: 20px;
+}
+#headdings h1{
+    font-size: 45px;
+}
+
+#footer{
+    width: 100%;
+    height: 70px;
+    
+    display: flex;
+}
+#footer form{
+    width: 100%;
+    height: 70px;
+    display: flex;
+}
+#footer input{
+    width: 40%;
+    height: 50px;
+    background-color: #3d3a3a;
+    border: 0.2px solid rgb(42, 41, 41);
+    border-radius: 50px;
+    position: relative;
+    left: 29vw;
+    top: 2vh;
+    font-size: 23px;
+    color: white;
+    font-family: "hub";
+    padding-left: 15px;
+    padding-right: 80px;
+    display: fixed;
+}
+
+#send{
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    position: relative;
+    left: 29.5vw;
+    top: 2.3vh;
+    background-image: url("/static/images/send1.png");
+    background-size: 130% 120%;
+    background-repeat: no-repeat;
+    border: 0.5px solid white;
+    display: fixed;
+}
+
+.p1{
+    color: white;
+    font-family: "galen";
+    text-align: center;
+    margin-top: 20px;
+}
+
+
