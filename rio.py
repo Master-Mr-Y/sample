@@ -3,9 +3,7 @@ import os
 from dotenv import load_dotenv
 import os
 
-# .env file load pannum
-key ="k-or-v1-5ba4888e1de3bb51730005496cdd583fe012ed61c5df32c0e419d2244b9fe628"
-k_key = f"s{key}"
+k_key = "YOUR API KEY HERE"
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key= k_key
@@ -19,7 +17,7 @@ def engine(qurry):
     messages = [
     {
         "role": "system",
-        "content": """
+        "content": """                  
 Respond only in clean HTML format.
 Use:
 - <b> for headings
